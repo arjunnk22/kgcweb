@@ -1,0 +1,395 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    color: #585858;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+/*  wrapper */
+.wrapper {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 576px) {
+    .wrapper {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .wrapper {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .wrapper {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .wrapper {
+        max-width: 1140px;
+    }
+}
+
+/*  /wrapper */
+
+.d-grid {
+    display: grid;
+}
+
+button,
+input,
+select {
+    -webkit-appearance: none;
+    outline: none;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    --c: rgb(85, 142, 248);
+    color: var(--c);
+    font-size: 16px;
+    border: 0.3em solid var(--c);
+    border-radius: 0.5em;
+    width: 10em;
+    height: 3em;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: sans-serif;
+    letter-spacing: 0.1em;
+    text-align: center;
+    line-height: 2em;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: 0.5s;
+    margin: 1em;
+}
+
+nav ul li span {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--c);
+    transform: translateY(150%);
+    border-radius: 50%;
+    left: calc((var(--n) - 1) * 25%);
+    transition: 0.5s;
+    transition-delay: calc((var(--n) - 1) * 0.1s);
+    z-index: -1;
+}
+
+nav ul li:hover {
+    color: black;
+}
+
+nav ul li:hover span {
+    transform: translateY(0) scale(2);
+}
+
+nav ul li span:nth-child(1) {
+    --n: 1;
+}
+
+nav ul li span:nth-child(2) {
+    --n: 2;
+}
+
+nav ul li span:nth-child(3) {
+    --n: 3;
+}
+
+nav ul li span:nth-child(4) {
+    --n: 4;
+}
+
+
+button,
+.btn,
+select {
+    cursor: pointer;
+}
+
+.discord{
+    color: #fff;
+    margin: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol {
+    margin: 10px;
+    padding: 2px;
+}
+
+.logo {
+    text-align: center;
+}
+
+a.brand-logo {
+    color: #fff;
+    font-weight: bold;
+    font-size: 36px;
+    text-transform: uppercase;
+}
+
+.dXc .coming-section {
+    min-height: 100vh;
+}
+
+.dXc .coming-section {
+    background: url(../images/bgimage.jpg) no-repeat center center/cover;
+    display: grid;
+    align-items: center;
+    grid-template-rows: auto 1fr auto;
+    grid-gap: 40px;
+    position: relative;
+    z-index: 0;
+}
+
+.dXc .coming-section:before {
+    content: "";
+    background: rgba(0, 0, 0, 0.75);
+    position: absolute;
+    top: 0;
+    min-height: 100%;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.dXc .logo {
+    padding-top: 30px;
+}
+
+.dXc header,
+.dXc footer {
+    width: 100%;
+}
+
+.dXc .content {
+    color: #fff;
+}
+
+.dXc .content h1 {
+    margin-top: 0;
+    font-size: 40px;
+    font-weight: normal;
+    color: #fff;
+    line-height: 56px;
+    margin-bottom: 30px;
+}
+
+.dXc .subscribe-form {
+    background: rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 490px;
+}
+
+.dXc main.content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    grid-gap: 40px;
+}
+
+
+
+.dXc p.subscribe {
+    margin: 10px;
+    font-size: 12px;
+}
+
+.dXc .right input[type=email] {
+    background: #fff;
+    border: none;
+    padding: 18px;
+    font-size: 16px;
+    color: #000;
+    border-radius: 4px;
+    flex-basis: 70%;
+}
+
+.dXc .right button[type=submit] {
+    text-transform: uppercase;
+    flex-basis: 28%;
+    border-radius: 4px;
+    border:none;
+    background-color: #00ff2f;
+    opacity: 0.85;
+    transition: 0.3s ease-in-out;
+}
+
+.dXc .right button[type=submit]:hover {
+    background-color: #00ff2f;
+    opacity: 1;
+    transition: 0.3s ease-in-out;
+}
+
+.dXc .countdown {
+    display: table;
+    font-weight: bold;
+    margin: auto;
+    width: 70%;
+    background: rgba(0, 0, 0, 0.45);
+}
+
+.dXc .countdown>div {
+    float: left;
+    min-width: 50%;
+    padding: 35px 0;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    border: 1px solid #eee;
+}
+
+.dXc .countdown>div:last-child,
+.dXc .countdown>div:nth-child(2) {
+    border-left: none;
+}
+
+.dXc .countdown>div:first-child,
+.dXc .countdown>div:nth-child(2) {
+    border-bottom: none;
+}
+
+.dXc .countdown__days {
+    border-top-left-radius: 4px;
+}
+
+.dXc .countdown__hours {
+    border-top-right-radius: 4px;
+}
+
+.dXc .countdown__minutes {
+    border-bottom-left-radius: 4px;
+}
+
+.dXc .countdown__seconds {
+    border-bottom-right-radius: 4px;
+}
+
+.dXc h4.update {
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 10px;
+    font-weight: normal;
+}
+
+.dXc .countdown span {
+    position: relative;
+    display: block;
+    font-size: 10px;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+@media (max-width: 800px) {
+    .dXc .content {
+        width: 100%;
+    }
+
+    .dXc main.content {
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+    }
+
+    .dXc .content h1 {
+        text-align: center;
+    }
+
+    .dXc .subscribe-form {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 667px) {
+    .dXc .content h1 {
+        font-size: 35px;
+        line-height: 42px;
+    }
+}
+
+@media (max-width: 500px) {
+    .dXc .content h1 {
+        font-size: 30px;
+        line-height: 38px;
+    }
+
+    .dXc .countdown>div {
+        font-size: 36px;
+    }
+
+    .dXc .right input[type=email] {
+        flex-basis: 100%;
+    }
+
+    .dXc .right button[type=submit] {
+        flex-basis: 100%;
+        margin-top: 10px;
+        padding: 18px 12px;
+    }
+    .dXc .countdown {
+        width: 90%;
+    }
+}
+
+@media (max-width: 384px) {
+    .dXc .countdown>div {
+        font-size: 34px;
+    }
+}
+
+/*  copyright */
+.copy-right p {
+    color: #fff;
+    font-size: 14px;
+    line-height: 22px;
+    text-align: center;
+    padding: 0 15px 15px 15px;
+}
+
+.copy-right p a {
+    color: #fff;
+    font-size: 16px;
+    text-decoration: underline;
+}
+
+.copy-right p a:hover {
+    text-decoration: none;
+}
+
+/*  /copyright */
